@@ -1,0 +1,144 @@
+body {
+  /* Sivun ulkoreunan osien väri **/
+  background-color: dimgray;
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+.banner {
+  /** Ylä otsikko **/
+  background-color: slategray;
+  text-align: center;
+  border: 0px solid whitesmoke;
+  height: 100px;
+  margin: 50px 20px;
+  padding-top: 20px;
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+h1 {
+  font-family: Verdana, Arial;
+  color: whitesmoke;
+  text-transform: uppercase;
+}
+
+.nav {
+  /** Sivunavigaation muotoilu **/
+  background-color: dimgray;
+  color: whitesmoke;
+  font-family: Verdana, Arial;
+  text-align: center;
+  font-size: 1.1em;
+  border: 0px solid whitesmoke;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1px;
+}
+
+a:link, a:visited {
+  color: darkred;
+  text-decoration: none;
+}
+
+a:hover {
+  color: steelblue;
+  background-color: whitesmoke;
+
+  padding: 2px;
+}
+
+.frame {
+  /* Pää-tekstikehyksen ulkonäkö */
+  background-color: slategray;
+  color: black;
+  border: 0px solid whitesmoke;
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+#naama {
+  /** Tekee kuvasta block-elementin ja keskittää sen **/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+}
+
+h2 {
+  background-color: dimgray;
+  color: whitesmoke;
+  text-align: left;
+  padding: 5px 30px; /** Tekstin "tyhjä" tila ympärillä **/
+  margin: 0px 30px; /** Tekstin taustavärin tyhjä tila reunoista **/
+}
+
+h3 {
+  text-align: center;
+}
+
+p, h4{
+  padding-left: 30px;
+}
+
+ul {
+  /* Siirtää listan pallukat tekstin viereen keskityksen ollessa käytössä */
+  list-style: inside;
+  text-align: left;
+}
+
+.contact_me {
+  text-align: center;
+}
+
+.image {
+  /** 'Thumbnail' -kuvien kehykset **/
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  padding: 2px;
+  margin-left: 50px;
+  margin-top: 10px;
+  height: 200px;
+}
+
+.imagelink:hover{
+  /** Poistaa kuvien linkkivärin **/
+  background-color: transparent
+  }
+
+.image:hover {
+  /** Kuvien 'hover' -keykset **/
+    box-shadow: 0 0 10px 5px dimgray;
+    border: none;
+  }
+
+.portfolio, .portfolio td, .portfolio th{
+  margin: 0 30px;
+  border: 2px solid slategray;
+  border-collapse: collapse;
+}
+
+.portfolio th {
+  background-color:gray;
+  color: whitesmoke;
+  font-size: 1.2em;
+  padding: 7px;
+}
+
+.portfolio td {
+  color:black;
+  padding: 4px;
+  }
+
+.portfolio tr {
+  background-color: lightgray;
+}
+
+/** Portfolio -taulukon sarakkeiden yhtenäinen leveys **/
+.column1{
+  width: 120px;
+  text-align: center;
+}
+.column2{
+  width: 20%;
+  min-width: 160px;
+}
