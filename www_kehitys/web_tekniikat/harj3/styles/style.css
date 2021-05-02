@@ -2,6 +2,7 @@ body {
   /* Sivun ulkoreunan osien väri **/
   background-color: dimgray;
   font-family: Helvetica,Arial,sans-serif;
+  margin: 0;
 }
 
 .banner {
