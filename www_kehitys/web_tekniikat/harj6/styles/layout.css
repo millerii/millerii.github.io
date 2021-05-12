@@ -1,0 +1,159 @@
+body {
+  font-size: 100%;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+    "DejaVu Sans", Verdana, sans-serif;
+	margin: 0;
+	text-align: left;
+	background-color: lightgrey;
+  color: black;
+}
+
+main {
+  width: 90%;
+  background-color: silver;
+  color: black;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #575757;
+  color: #F0EBEB;
+  text-align: center;
+  padding: 0.7em 0;
+  letter-spacing: 0.5em;
+}
+
+nav, footer {
+  background-color: #E49A2F;
+  color: #F7F5EE;
+  text-align: center;
+  height: 1.875em;
+  padding-top: 0.6875em;
+}
+
+/* START nav-style */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  color: white;
+  text-align: center;
+  padding: 0.6875em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+li a:hover:not(.active) {
+  background-color: #575757;
+}
+
+.active {
+  background-color:rgba(87, 87, 87, 0.25);
+}
+/* END nav-style */
+
+section a:link, section a:visited {
+  color: #575757;
+}
+
+section a:hover {
+  color:#AC9675;
+}
+footer a:link, footer a:visited {
+  color: #575757;
+}
+footer a:hover {
+  color: #F7F5EE;
+}
+section {
+  background-color: #D8CCAF;
+  width: 100%;
+  overflow: auto;
+  padding: 2% 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  color: #E49A2F;
+}
+section.content_left, section.content_right {
+  background-color:#F7F5EE;
+  width: 42%;
+  border: 1px solid #AC9675;
+  padding: 1em;
+  overflow: auto;
+}
+
+section.content_left {
+  margin-left: 2%;
+  border-radius: 0.7em;
+  float: left;
+}
+
+section.content_right{
+  margin-right: 2%;
+  border-radius: 0.7em;
+  float: right;
+}
+
+footer {
+  clear: right;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-top: 1em;
+}
+/* START Portfolion määritykset */
+.portfolio, .portfolio td, .portfolio th{
+  border: 2px solid slategray;
+  border-collapse: collapse;
+  padding: 0.4em;
+}
+
+.portfolio th {
+  background-color:gray;
+  color: whitesmoke;
+  font-size: 1.1em;
+}
+
+.portfolio td {
+  color:black;
+  }
+
+.portfolio tr {
+  background-color: lightgray;
+}
+/* END Portfolio */
+
+/* START Kuvien määritykset*/
+.image {
+  /** 'Thumbnail' -kuvien kehykset **/
+  border: 2px solid whitesmoke;
+  border-radius: 0.8em;
+  padding: 2px;
+  margin-left: 0.4em;
+  margin-top: 0.4em;
+  width: 80%;
+  height: auto;
+}
+
+.imagelink:hover{
+  /** Poistaa kuvien linkkivärin **/
+  background-color: transparent
+  }
+
+.image:hover {
+  /** Kuvien 'hover' -keykset **/
+    box-shadow: 0 0 0.6em 0.3em #E49A2F;
+    border: none;
+  }
+/* END Kuvat */
