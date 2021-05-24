@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/lightbox.css" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kuvakalleria</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #e0f2f1;
+    }
+
+    section :not(header) {
+      /*margin-bottom: 1.875rem;*/
+      padding-left: 0.5rem;
+    }
+
+    header h1 {
+      margin-top: 0;
+      padding: 0.75rem;
+      background-color: #aebfbe;
+      color: #1c313a;
+    }
+    /* START Kuvien määritykset*/
+    .image {
+      /** 'Thumbnail' -kuvien kehykset **/
+      border: 0.125rem solid #718792;
+      border-radius: 0.8125em;
+      padding: 0.125rem;
+      margin: 0.125rem;
+      width: auto;
+      height: 10rem;
+    }
+
+    .imagelink:hover {
+      /** Poistaa kuvien linkkivärin **/
+      background-color: transparent
+    }
+
+    .image:hover {
+      /** Kuvien 'hover' -keykset **/
+      margin: 0.25rem;
+      box-shadow: 0 0 0.625rem 0.3125rem #718792;
+      border: none;
+    }
+  /* END Kuvat */
+
+  #bg-kopteri {
+    position: absolute;;
+    width: 100%;
+    z-index: -1;
+  }
+  .bg-video {
+    color:yellowgreen;
+    padding-bottom: 54vw;
+  }
+  </style>
+</head>
+
+<body>
+  <section>
+    <header>
+      <h1>Kuvagaltsu</h1>
+    </header>
+    <a class="imagelink" href="images/fusion_penkki.jpg" data-lightbox="woodworking" data-title="Ulkopenkin suunnittelu Fusion 360 -ohjelmalla">
+      <img class="image" src="images/fusion_penkki.jpg" alt="Ulkopenkin suunnittelu"></a>
+    <a class="imagelink" href="images/ulkopenkki.jpg" data-lightbox="woodworking" data-title="Ulkopenkki">
+      <img class="image" src="images/ulkopenkki.jpg" alt="Ulkopenkki"></a>
+    <a class="imagelink" href="images/viiniteline.jpg" data-lightbox="woodworking" data-title="Viiniteline">
+      <img class="image" src="images/viiniteline.jpg" alt="Viiniteline"></a>
+  </section>
+
+  <section>
+    <header>
+      <h1>Video-elementti</h1>
+    </header>
+    <video width="640" height="360" controls poster="images/heli_thumb.png">
+      <source src="https://student.labranet.jamk.fi/~nikar/valintaopintojakso/harj7/assets/helicopter.mp4" type="video/mp4">
+      Browser not supporting mp4-video :(
+    </video>
+  </section>
+
+  <section class="bg-video">
+    <header>
+      <h1>Video taustakuvana</h1>
+    </header>
+      <video autoplay muted loop id="bg-kopteri">
+        <source src="https://student.labranet.jamk.fi/~nikar/valintaopintojakso/harj7/assets/helicopter.mp4" type="video/mp4">
+        Browser not supporting mp4-video :(
+      </video>
+      <p>
+        Asettamalla videolle 'muted', 'autoplay' ja 'loop' -atribuutit jolloin
+        video pyörii automaattisesti taustalla.<br>
+        <code>&#60;video&#62; autoplay muted loop&#62&#60;/video&#62;</code><br>
+        Sitten asettamalla videon sijainti kiintesti paikalle ja 100% leveys ja/tai korkeus sekä asettamalla 'z-index: -1;'.<br>
+        Itse lähtisin ehkä tekemään videopätkästä gif kuvan ja asettamalla sen taustakuvaksi.
+      </p>
+
+  </section>
+
+  <section>
+    <header>
+      <h1>Audio-elementti</h1>
+    </header>
+    <p>
+      Kalinka audio:<br>
+      <audio controls>
+        <source src="https://student.labranet.jamk.fi/~nikar/valintaopintojakso/harj7/assets/kalimba.mp3" type="audio/mpeg">
+        Browser not supporting audio element.
+      </audio>
+    </p>
+  </section>
+
+  <section>
+    <header>
+      <h1>Audio taustamusiikki</h1>
+    </header>
+    <p>
+      Korvaamalla 'controls'-atribuutti 'autoplay'-atribuutilla,
+      jolloin sivuston kävijän saa viimeistään tässä vaiheessa poistumaan
+      sivuiltasi sadasosasekunnissa :D (jos selain ei estä äänellistä autoplaytä).
+
+    </p>
+
+  </section>
+
+    <script src="js/lightbox-plus-jquery.js"></script>
+    <script>
+      lightbox.option({
+        'resizeDuration': 400,
+        'wrapAround': true,
+        'imageFadeDuration': 500,
+      })
+    </script>
+</body>
+</html>
