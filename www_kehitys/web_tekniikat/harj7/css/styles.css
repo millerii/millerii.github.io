@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	background-color: #e0f2f1;
+}
+
+section :not(header) {
+	/*margin-bottom: 1.875rem;*/
+	padding-left: 0.5rem;
+}
+
+header h1 {
+	margin-top: 0;
+	padding: 0.75rem;
+	background-color: #aebfbe;
+	color: #1c313a;
+}
+	/* START Kuvien määritykset*/
+.image {
+	/** 'Thumbnail' -kuvien kehykset **/
+	border: 0.125rem solid #718792;
+	border-radius: 0.8125em;
+	padding: 0.125rem;
+	margin: 0.125rem;
+	width: auto;
+	height: 10rem;
+}
+.imagelink:hover {
+	/** Poistaa kuvien linkkivärin **/
+	background-color: transparent
+}
+.image:hover {
+	/** Kuvien 'hover' -keykset **/
+	margin: 0.25rem;
+	box-shadow: 0 0 0.625rem 0.3125rem #718792;
+	border: none;
+}
+	/* END Kuvat */
+
+#bg-kopteri {
+	position: absolute;
+	padding: 0;
+	width: 100%;
+	z-index: -1;
+}
+.bg-video {
+	color:yellowgreen;
+	padding-bottom: 54vw;
+}
+
+p {
+	max-width: 90ch;
+}
