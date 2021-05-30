@@ -1,12 +1,50 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Main page</title>
-</head>
-<body>
+<html lang="fi">
 
-<h1>Otsikko</h1>
-<p>Lause</p>
+<head>
+  <title>Olli Lehtonen - Etusivu</title>
+  <meta charset="UTF-8">
+  <!--TODO: Hakukone metadatat!!-->
+  <!--TODO: FavIco-->
+  <!--TODO: Custom Scrollbar-->
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://kit.fontawesome.com/003310c07e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header>
+  <nav>
+    <img class="nav-logo" src="images/logo_ollit.png" alt="OlliT logo">
+    <ul class="flex-nav">
+      <li class="active"><a href="index.html">[ \home\olli ]</a></li>
+      <li><a href="#">[ ~\harrastukset_ja_projektit ]</a></li>
+      <li><a href="#">[ cat portfolio.html ]</a></li>
+    </ul>
+  </nav>
+
+  <h1>Olli Lehtonen</h1>
+</header>
+
+<section>
+  <article>
+    <header>
+      <h2>&gt;$ whoami</h2>
+    </header>
+    <p>
+      Olen opiskelut JAMK-avoimessa muutamia kursseja sekä hakeutumassa
+      ICT-monimuoto-opintoihin
+    </p>
+
+    <p>&gt;$ pandoc -s portfolio.txt -o portfolio.html</p>
+    <p>&gt;$ grep "harrastukset" "projektit"</p>
+  </article>
+</section>
+
+<footer>
+  <a href="mailto:olli.lehtonen@gmail.com_POISTA">email: <i class="fas fa-at"></i></a>
+  | <a href="https://www.linkedin.com/in/olli-p-lehtonen" target="_blank">linkedin: <i class="fab fa-linkedin"></i></a>
+  | <a href="https://github.com/millerii" target="_blank">github: <i class="fab fa-github"></i></a>
+</footer>
 
 </body>
 </html>

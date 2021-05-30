@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Julius+Sans+One&display=swap');
+
+* { /* Asetukset jotka koskevat aivan kaikkea sivulla olevaa */
+  margin: 0px; /* Nollaa ihan jokaiselta elementiltä, body,h1,p,ul... */
+  /*padding: 0;*/ /* Poistaa myös mm. listoista*/
+  box-sizing: border-box;
+}
+:root { /* Color-variables */
+  --bg-color: #2B3338;
+  --front-color: #5C6C78;
+  --font-color: gainsboro;
+  --hi-color: yellow;
+  --active-color: #5c6c786b;
+}
+
+/* || Base styles */
+body {
+  /*DEV*/border: 1px dashed red;
+  /*TODO: sivun max-width*/
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-size: 100%;
+  font-family: "Chakra Petch", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+  "DejaVu Sans", Verdana, sans-serif;
+  /*background-image: url("../www_kehitys/web_tekniikat/water_drop.jpg");*/
+  /*background-blend-mode: multiply;*/
+  /*background-size: cover;*/
+}
+
+/*********************************/
+/* || Header, Footer, Navigation */
+nav {
+  /*DEV*/border: 1px dashed yellow;
+  display: flex;
+  justify-content: space-between;
+  /*text-align: center;*/
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--front-color);
+}
+.nav-logo {
+  /*DEV*/border: 1px dashed greenyellow;
+  /*display: inline-block;*/ /*Tomii ilmankin*/
+  padding-left: 1rem;
+  height: 2.8rem; /* Korkeus riippuvainen 'nav fon-size' ja 'a:any-link padding' */
+}
+.flex-nav {
+  list-style: none;
+	margin: 0;
+	padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; /*TODO: Mobile view direction: column*/
+  justify-content: flex-end;
+}
+
+nav a {
+  /*DEV*/border: 1px dashed red;
+  display: inline-block;
+  /*padding: .5rem*/
+  color: var(--font-color);
+  text-decoration: none;
+}
+nav a:any-link {
+  color: var(--font-color);
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+}
+nav a:hover {
+  background-color: var(--front-color);
+}
+.active {
+  background-color: var(--active-color);
+}
+header h1 {
+  /*DEV*/border: 1px dashed blue;
+  font-family: 'Julius Sans One', sans-serif;
+  letter-spacing: 0.8rem;
+  font-size: 4rem;
+  text-align: center;
+}
+
+footer {
+  /*DEV*/ border: 1px dashed greenyellow;
+  font-size: 1rem;
+  text-align: center;
+  clear: right;
+}
+footer a:any-link {
+  text-decoration: none;
+  color: var(--font-color);
+  padding: 0 1rem 0 1rem
+}
+footer a:hover {
+  color: var(--front-color);
+}
+
+/***************/
+/* || Content */
+
+
+p {
+  margin: 0.5rem;
+}
+
+
+
+
+/* || Typography */
+
+
+
+
+
+/* || UTILITIES */
+
+  /* || SITEWIDE */
