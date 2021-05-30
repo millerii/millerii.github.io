@@ -5,12 +5,13 @@
   /*padding: 0;*/ /* Poistaa myös mm. listoista*/
   box-sizing: border-box;
 }
-:root { /* Color-variables */
+:root { /* Global variables */
   --bg-color: #2B3338;
   --front-color: #5C6C78;
   --font-color: gainsboro;
   --hi-color: yellow;
   --active-color: #5c6c786b;
+  --view-width: 100%;
 }
 
 /* || Base styles */
@@ -19,9 +20,9 @@ body {
   /*TODO: sivun max-width*/
   background-color: var(--bg-color);
   color: var(--font-color);
-  font-size: 100%;
   font-family: "Chakra Petch", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
   "DejaVu Sans", Verdana, sans-serif;
+  font-size: 100%;
   /*background-image: url("../www_kehitys/web_tekniikat/water_drop.jpg");*/
   /*background-blend-mode: multiply;*/
   /*background-size: cover;*/
@@ -49,14 +50,13 @@ nav {
 	padding: 0;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row; /*TODO: Mobile view direction: column*/
+  flex-direction: row;
   justify-content: flex-end;
 }
 
 nav a {
   /*DEV*/border: 1px dashed red;
   display: inline-block;
-  /*padding: .5rem*/
   color: var(--font-color);
   text-decoration: none;
 }
@@ -73,7 +73,7 @@ nav a:hover {
 header h1 {
   /*DEV*/border: 1px dashed blue;
   font-family: 'Julius Sans One', sans-serif;
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.5rem;
   font-size: 4rem;
   text-align: center;
 }
@@ -82,7 +82,6 @@ footer {
   /*DEV*/ border: 1px dashed greenyellow;
   font-size: 1rem;
   text-align: center;
-  clear: right;
 }
 footer a:any-link {
   text-decoration: none;
@@ -103,13 +102,26 @@ p {
 
 
 
-
-/* || Typography */
-
-
-
-
-
-/* || UTILITIES */
-
-  /* || SITEWIDE */
+/**************************/
+/* || Mobile-optimization */
+@media screen and (max-width: 620px) {
+  header h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+  .flex-nav {
+    flex-direction: column;
+  }
+  nav a:any-link {
+    color: var(--font-color);
+    padding: 0.5rem;
+  }
+  .nav-logo {
+    padding: 0;
+    margin: auto;
+    width: calc(var(--view-width) - 250px);
+    min-width: 10rem;
+    max-width: 16rem;
+    height: auto;
+  }
+}
