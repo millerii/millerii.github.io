@@ -28,20 +28,28 @@ body {
   /*background-size: cover;*/
 }
 
+h1, h2, h3, h4 {
+  padding: 0.5rem;
+}
+
+h2 {
+  padding: 1rem;
+}
+
 /*********************************/
 /* || Header, Footer, Navigation */
 nav {
   /*DEV*/border: 1px dashed yellow;
+  background-color: var(--front-color);
   display: flex;
   justify-content: space-between;
-  /*text-align: center;*/
   font-size: 1.3rem;
   border-bottom: 2px solid var(--front-color);
 }
 .nav-logo {
-  /*DEV*/border: 1px dashed greenyellow;
   /*display: inline-block;*/ /*Tomii ilmankin*/
   padding-left: 1rem;
+  margin: auto 0;
   height: 2.8rem; /* Korkeus riippuvainen 'nav fon-size' ja 'a:any-link padding' */
 }
 .flex-nav {
@@ -95,22 +103,83 @@ footer a:hover {
 /***************/
 /* || Content */
 
-
 p {
   margin: 0.5rem;
 }
 
+/* Portfolio */
+.flex-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.left-cont {
+  display: flex;
+}
+.right-cont {
+  display: flex;
+}
+
+td {
+  border: 1px dotted gray;
+}
+.portfolio {
+  /*DEV*/border: 1px dotted gray;
+  border-radius: 2rem;
+  /*background-color: var(--front-color);
+  color: whitesmoke;
+  /*border-collapse: collapse;*/
+  border-spacing: 0;
+  margin: 0;
+  /*border: 1px dotted red;*/
+}
+/*.portfolio th {
+  font-size: 1.5em;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}*/
+.portfolio td.time, .portfolio td.place {
+  text-align: left;
+  width: 25rem;
+  height: auto;
+  padding: 1rem 0.5rem;
+  /*TODO: uloimpien left ja right paddin 0
+    sisempi pädding 1rem*/
+}
+
+.portfolio td.place {
+  border: 1px solid yellow;
+  border-width: 1px 1px 1px 0;
+  border-top-right-radius: 4em;
+  border-bottom-right-radius: 4em;
+  border-top-left-radius: 4em;
+  border-bottom-left-radius: 4em;
+  padding-left:
+}
+.portfolio td.right {
+  text-align: right;
+  border-width: 1px 0 1px 1px;
+}
+.portfolio td.time {
+  border: none;
+}
 
 
 /**************************/
 /* || Mobile-optimization */
-@media screen and (max-width: 620px) {
+/*TODO: 390px min portofoliolle*/
+@media only screen and (max-width: 620px) {
   header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 1px;
+  }
+  nav {
+    font-size: 1.1rem;
   }
   .flex-nav {
     flex-direction: column;
+    align-items: flex-end;
   }
   nav a:any-link {
     color: var(--font-color);
