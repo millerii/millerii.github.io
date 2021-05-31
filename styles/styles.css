@@ -15,36 +15,51 @@
 }
 
 /* || Base styles */
+/******************/
 body {
-  /*DEV*/border: 1px dashed red;
   /*TODO: sivun max-width*/
+  max-width: 1500px;
+  margin: auto;
   background-color: var(--bg-color);
   color: var(--font-color);
   font-family: "Chakra Petch", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
   "DejaVu Sans", Verdana, sans-serif;
   font-size: 100%;
-  /*background-image: url("../www_kehitys/web_tekniikat/water_drop.jpg");*/
-  /*background-blend-mode: multiply;*/
-  /*background-size: cover;*/
+  background-image: url("../www_kehitys/web_tekniikat/wood.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
 }
 
 h1, h2, h3, h4 {
+  color: var(--font-color);
   padding: 0.5rem;
 }
-
 h2 {
-  padding: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+p {
+  color: var(--font-color);
+  margin: 0.5rem;
 }
 
 /*********************************/
 /* || Header, Footer, Navigation */
 nav {
-  /*DEV*/border: 1px dashed yellow;
-  background-color: var(--front-color);
+  background-color: var(--bg-color);
   display: flex;
   justify-content: space-between;
   font-size: 1.3rem;
-  border-bottom: 2px solid var(--front-color);
+  border-radius: 0.5rem;
 }
 .nav-logo {
   /*display: inline-block;*/ /*Tomii ilmankin*/
@@ -63,7 +78,6 @@ nav {
 }
 
 nav a {
-  /*DEV*/border: 1px dashed red;
   display: inline-block;
   color: var(--font-color);
   text-decoration: none;
@@ -79,17 +93,25 @@ nav a:hover {
   background-color: var(--active-color);
 }
 header h1 {
-  /*DEV*/border: 1px dashed blue;
   font-family: 'Julius Sans One', sans-serif;
   letter-spacing: 0.5rem;
   font-size: 4rem;
   text-align: center;
+  border-bottom: 2px solid var(--bg-color);
+}
+header h2 {
+  text-align: center;
+  /* display: inline-block;
+  background-color: var(--front-color);
+  width: 600px;
+  margin-left: aut;
+  border-radius: 1rem;*/
 }
 
 footer {
-  /*DEV*/ border: 1px dashed greenyellow;
   font-size: 1rem;
   text-align: center;
+  padding: 0.5rem 0 0.5rem 0;
 }
 footer a:any-link {
   text-decoration: none;
@@ -103,34 +125,56 @@ footer a:hover {
 /***************/
 /* || Content */
 
-p {
-  margin: 0.5rem;
+/* Index */
+
+.content {
+  /*DEV*/border: 1px dotted yellow;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-cont, .right-cont {
+  /*DEV*/border: 1px dotted violet;
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  min-width: 500px;
+  padding: 1rem 0.5;
+  margin: 1rem;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.content p {
+  /*DEV*/border: 1px dotted red;
+  margin: 1rem;
+  font-size: 1.1rem;
 }
 
 /* Portfolio */
+
 .flex-portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
-.left-cont {
+.left-port, .right-port {
   display: flex;
-}
-.right-cont {
-  display: flex;
+  justify-content: center;
+  min-width: 500;
+  padding: 1rem;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
-td {
-  border: 1px dotted gray;
-}
 .portfolio {
-  /*DEV*/border: 1px dotted gray;
   border-radius: 2rem;
-  /*background-color: var(--front-color);
-  color: whitesmoke;
+  background-color: var(--bg-color);
+  color: var(--front-color);
   /*border-collapse: collapse;*/
   border-spacing: 0;
-  margin: 0;
+  padding: 1rem;
   /*border: 1px dotted red;*/
 }
 /*.portfolio th {
@@ -140,6 +184,7 @@ td {
   padding-top: 10px;
 }*/
 .portfolio td.time, .portfolio td.place {
+  min-width: 250px;
   text-align: left;
   width: 25rem;
   height: auto;
@@ -151,11 +196,11 @@ td {
 .portfolio td.place {
   border: 1px solid yellow;
   border-width: 1px 1px 1px 0;
-  border-top-right-radius: 4em;
-  border-bottom-right-radius: 4em;
-  border-top-left-radius: 4em;
-  border-bottom-left-radius: 4em;
-  padding-left:
+  border-top-right-radius: 3em;
+  border-bottom-right-radius: 3em;
+  border-top-left-radius: 3em;
+  border-bottom-left-radius: 3em;
+  /*padding-left:*/
 }
 .portfolio td.right {
   text-align: right;
@@ -192,5 +237,12 @@ td {
     min-width: 10rem;
     max-width: 16rem;
     height: auto;
+  }
+  footer a:any-link {
+    padding: 0 0.5rem 0 0.5rem
+  }
+  .portfolio td.place {
+    border-radius: 1rem;
+    padding: 0;
   }
 }
