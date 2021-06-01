@@ -18,9 +18,9 @@
   <nav>
     <img class="nav-logo" src="images/logo_ollit.png" alt="OlliT logo">
     <ul class="flex-nav">
-		<li><a href="index.html">[ \home\olli ]</a></li>
-		<li class="active"><a href="harrastukset.html">[ ~\projektit ]</a></li>
-		<li><a href="portfolio.html">[ ~\portfolio ]</a></li>
+		  <li><a href="index.html">[ \home\olli ]</a></li>
+		  <li class="active"><a href="harrastukset.html">[ ~\projektit ]</a></li>
+		  <li><a href="portfolio.html">[ ~\portfolio ]</a></li>
 	  </ul>
 	</nav>
 
@@ -29,23 +29,86 @@
 
 <!-- Content -->
 <section>
-  <section>
-    <header>
-      <h2>&gt;$ grep "harrastukset" "projektit"</h2>
-    </header>
-    <section class="content">
-      <article class="left-cont">
-        <h4> Kotiverkon suunnittelu ja toteutus</h4>
-        hei
-      </article>
-      <article class="right-cont">
-        <h4>hei</h4>
-        <p>
-          Olen myös tanssinut
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et animi accusamus facere dignissimos enim, vero assumenda numquam blanditiis? Exercitationem ipsam nobis ducimus corporis asperiores est deleniti, inventore nihil tempore sit.
-        </p>
-      </article>
-    </section>
+  <header>
+    <h2>&gt;$ grep "harrastukset" "projektit"</h2>
+  </header>
+  <section class="content">
+    <article class="left-cont">
+      <h3>Tietotekniikka</h3>
+      <h5> Kotiverkon suunnittelu ja toteutus</h5>
+      <p>
+        <i class="fas fa-network-wired fa-3x fa-pull-left"></i>
+        Muutimme alkuvuonna uuteen paritaloon, jossa oli CAT6-sisäverkkokaapelointi joka huoneessa.
+        Päätin itseopiskelutarkoituksessa totetuttaa kotiverkkolaitteiston järeämmällä ratkaisulla.
+        Lähtökohtana kaikki mahdolliset kytketään ensisijaisesti kaapelilla ja loput sitten toimivat wlanissa.
+        Lisäksi henkilökohtaiset laitteet on eriytetty omaan suojattuun verkon osaan
+        ja "kaupalliset" internettiä käyttävät laitteet ovat omassa verkko-osassaan.
+        Reitittimeksi valikoitui Ubiquitin EdgeRouter X-SFP monipuolisuuden ja edullisen hinnan puolesta,
+        wlaniksi saman valmistajan UAP-AC-Lite tukiasema.<br>
+        Lisää asiasta <a href="http://oletsu.blogspot.com/search/label/Kotiverkko">blogissani</a>.
+      </p>
+
+      <h5>Raspberry Pi ja Linux</h5>
+      <p>
+        <i class="fab fa-raspberry-pi fa-3x fa-pull-left"></i>
+        Tutustuin Raspberry-tietokoneeseen sen ensimmäisen version aikaan.
+        Tämän johdosta myös tutustuin linuxiin enemmän ja päädyin käyttämään sitä kotitietokoneen
+        pääasiallisena käyttöjärjestelmänäkin. Nyt tästä on kulunut jo 6-vuotta aikaa
+        ja linux on edelleen pääasiallinen käyttöjärjestelmä.<br>
+        Raspberrylle olen ohjelmoinut pythonilla lämpötilanluku-ohjelman käyttäen
+        DS1820 lämpötila-antureita 1wire-väylässä.
+        <a href="https://github.com/millerii/rpi-temp-logger">rpi-temp-logger</a>
+      </p>
+
+      <h5>Blogi</h5>
+      <p>
+        Lisää omista näpräysistäni voi lukea blogistani, jota epäsäännöllisesti kirjoittelen
+        muistiinpanoiksi ja asioiden kertaukseksi. Jos joku muukin siitä jotain saa irti on se plussaa.<br>
+        <a href="http://oletsu.blogspot.com/">Elektroniikkaa ja tietotekniikkaa</a>
+      </p>
+      <h5>Codesys</h5>
+      <p>
+        Codesys ohjelmointi, nappipeli ja tyco rata
+      </p>
+    </article>
+    <article class="right-cont">
+      <h5>3D-suunnittelu</h5>
+      <h5>Puutöiden mallinnus</h5>
+      <p>
+        <i class="fas fa-cubes fa-3x fa-pull-left"></i>
+        Käytän puutöiden suunnitteluun Fusion 360 -ohjelmaa. Se on ilmainen harrastekäyttöön
+        ja kohtuu helppo lähestyä. Tutoriaaleja löytyy myös paljon youtubesta ym.
+        Parhaita ominaisuuksia suunnittelussa on parametrisuus, jolla voi helposti
+        koittaa eri mittoja ja koko malli muuttuu automaattisesti asetettujen sääntöjen
+        mukaiseen uusiin mittoihin.<br>
+        <a class="imagelink" href="images/fusion_penkki.jpg">
+          <img class="image" src="images/fusion_penkki.jpg" alt="Fusion360 ulkopenkki"></a>
+      </p>
+
+      <h5>Puutyöt</h5>
+      <p>
+        Puutyöt ovat rauhan tyyssija, missä saa ilman kiirettä näpertää omilla käsillä
+        ja näkee oman kädenjälkensä samantien.<br>
+        Muutama projekti mitä olen tehnyt:<br>
+        <a class="imagelink" href="images/viiniteline.jpg">
+          <img class="image" src="images/viiniteline.jpg" alt="Viiniteline"></a>
+        <a class="imagelink" href="images/ulkopenkki.jpg">
+          <img class="image" src="images/ulkopenkki.jpg" alt="Ulkopenkki"></a>
+      </p>
+
+      <h5>Juoksy & pyöräily</h5>
+      <p>
+        <i class="fas fa-biking fa-3x fa-pull-left"></i>
+        Lapsena pyöräilin paljon ja yksi muistuvin matka oli, kun pyöräilimme isän kanssa mummolaan isostakyröstö
+        kauhavalle.<br>
+        15-vuotiaaksi matkaa tuli kiitettävät 60 km. Olisikohan aikaa mennyt joku 8 tuntia uimataukoineen.<br>
+        Nykypäivänä olen kulkenut työmatkani pääasiassa pyörällä ja vapaa-ajan ajoja maastossa fatbikella.
+      </p>
+      <p>
+        Juossut olen aina satunnaisesti, mutta nyt olisi taas intoa juosta, mutta povi meinaa vioitella.<br>
+        Tavoitteenani olisikin juosta vielä puolimaratooni joku päivä.
+      </p>
+    </article>
   </section>
 </section>
 

@@ -30,32 +30,36 @@ body {
   /*background-size: cover;*/
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   color: var(--font-color);
   padding: 0.5rem;
 }
-h2 {
+h2 { /* Site -heading */
   font-family: 'Courier New', Courier, monospace;
   font-weight: normal;
   font-size: 1.2rem;
   padding: 0.5rem;
 }
-h3 {
+h3 { /* Main section -heading */
   font-size: 2rem;
+  margin: 1rem;
 }
-h4 {
-  /*DEV*/border: 1px dotted red;
+h4 { /* Portfolio 'place' -heading*/
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+h5 { /* Content -heading */
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
 p {
-  /*DEV*/border: 1px dotted violet;
   color: var(--font-color);
   margin: 0.5rem;
 }
 i {
-  /*DEV*/border: 1px dotted yellow;
-  /*TODO: Teksti ikonin ympärille*/
   color: var(--front-color);
 }
 
@@ -146,8 +150,6 @@ footer a:hover {
 .left-cont, .right-cont {
   background-color: var(--bg-color);
   border-radius: 2rem;
-  display: flex;
-  justify-content: center;
   min-width: 29rem;
   padding: 1rem 0.5;
   margin: 1rem;
@@ -171,6 +173,7 @@ footer a:hover {
 .left-port, .right-port {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   padding: 1rem;
   flex-grow: 1;
   flex-basis: 0;
@@ -183,6 +186,7 @@ footer a:hover {
   /*border-collapse: collapse;*/
   border-spacing: 0;
   padding: 0 1rem;
+  padding-bottom: 1rem;
   /*border: 1px dotted red;*/
 }
 /*.portfolio th {
