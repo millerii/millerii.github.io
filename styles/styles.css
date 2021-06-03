@@ -114,6 +114,7 @@ nav a {
   display: inline-block;
   color: var(--font-color);
   text-decoration: none;
+
 }
 nav a:any-link {
   color: var(--font-color);
@@ -121,9 +122,15 @@ nav a:any-link {
 }
 nav a:hover {
   background-color: var(--front-color);
+  border-radius: 0.8rem;
 }
 .active {
-  background-color: var(--active-color);
+  /*background-color: var(--active-color);*/
+  box-sizing: content-box;
+  border: 1px solid var(--front-color);
+  border-top-width: 0;
+  border-bottom-width: 3px;
+  border-radius: 1rem;
 }
 header h1 {
   font-family: 'Julius Sans One', sans-serif;
@@ -207,7 +214,7 @@ footer a:hover {
 }
 
 .portfolio {
-  /*DEV*/border: 1px dashed red;*/
+  /*DEV*//*border: 1px dashed red;*/
   /*background-color: var(--bg-color);*/
   color: var(--font-color);
   border-spacing: 0;
@@ -230,14 +237,14 @@ footer a:hover {
   border: none;
   min-width: 150px;
 }
-.portfolio td.place:not(.right) {
-  border-left-width: 0;
-  border-right-width: 3px;
-}
-.portfolio td.right {
+.portfolio td.place:nth-child(odd) {
   border-right-width: 0;
   border-left-width: 3px;
   text-align: right;
+}
+.portfolio td.place:nth-child(even) {
+  border-left-width: 0;
+  border-right-width: 3px;
 }
 
 
