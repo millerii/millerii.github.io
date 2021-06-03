@@ -2,16 +2,15 @@
 
 * { /* Asetukset jotka koskevat aivan kaikkea sivulla olevaa */
   margin: 0px; /* Nollaa ihan jokaiselta elementiltä, body,h1,p,ul... */
-  padding: 0; /* Poistaa myös mm. listoista*/
+  /*padding: 0;*/ /* Poistaa myös mm. listoista*/
   box-sizing: border-box;
 }
 :root { /* Global variables */
-  --bg-color: #2b3338;
-  --front-color: #5c6c78;
+  --bg-color: #2b333800;
+  --front-color: #6f7579;
   --font-color: gainsboro;
-  --hi-color: yellow;
+  --hi-color: #6f7579;
   --active-color: #5c6c786b;
-  --code-color: whitesmoke;
   --view-width: 100%;
 }
 
@@ -21,14 +20,15 @@ body {
   /*TODO: sivun max-width*/
   max-width: 1500px;
   margin: auto;
-  background-color: var(--bg-color);
+  background-color: rgb(139, 139, 139);
   color: var(--font-color);
   font-family: "Chakra Petch", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
   "DejaVu Sans", Verdana, sans-serif;
   font-size: 100%;
   background-image: url("../images/wood.jpg");
-  /*background-blend-mode: multiply;*/
+  background-blend-mode: multiply;
   background-attachment: fixed;
+  /*background-size: cover;*/
 }
 
 h1, h2, h3, h4, h5 {
@@ -40,7 +40,6 @@ h2 { /* Site -heading */
   font-weight: normal;
   font-size: 1.2rem;
   padding: 0.5rem;
-  color: var(--code-color);
 }
 h3 { /* Main section -heading */
   font-size: 2rem;
@@ -60,37 +59,18 @@ h5 { /* Content -heading */
 p {
   color: var(--font-color);
   margin: 0.5rem;
-  margin-bottom: 0;
 }
 i {
   color: var(--front-color);
 }
 
-/* || Kuvien määritykset */
-/***************************/
-.image {
-  /** 'Thumbnail' -kuvien kehykset **/
-  border: 0.125rem solid var(--front-color);
-  border-radius: 13px;
-  padding: 0.125rem;
-  margin: 0.375rem;
-  width: auto;
-  height: 9rem;
-}
-.image:hover {
-  /** Kuvien 'hover' -keykset **/
-    margin: 6px;
-    box-shadow: 0 0 0.625rem 0.3125rem var(--font-color);
-    border: none;
-  }
-
 /*********************************/
 /* || Header, Footer, Navigation */
 nav {
-  /*background-color: var(--bg-color);*/
+  background-color: var(--bg-color);
   display: flex;
   justify-content: space-between;
-  margin: 0.5rem 2rem;
+  margin: 0.5rem 1rem;
   font-size: 1.3rem;
   border-radius: 0.5rem;
 }
@@ -99,6 +79,7 @@ nav {
   padding-left: 1rem;
   margin: auto 0;
   height: 2.7rem; /* Korkeus riippuvainen 'nav fon-size' ja 'a:any-link padding' */
+  color: gainsboro;
 }
 .flex-nav {
   list-style: none;
@@ -131,6 +112,7 @@ header h1 {
   font-size: 4rem;
   text-align: center;
   border-bottom: 2px solid var(--bg-color);
+  color: gainsboro;
 }
 header h2 {
   text-align: center;
@@ -147,15 +129,17 @@ header h2 {
 footer {
   font-size: 1rem;
   text-align: center;
-  margin: 0.5rem 0 1.5rem 0;
+  padding: 0.5rem 0 0.5rem 0;
+  color: gainsboro;
 }
 footer a:any-link {
   text-decoration: none;
   color: var(--font-color);
-  padding: 0 1rem 0 1rem
+  padding: 0 1rem 0 1rem;
+  color: gainsboro;
 }
 footer a:hover {
-  color: var(--front-color);
+  color: var(--font-color);
 }
 
 /***************/
@@ -166,24 +150,18 @@ footer a:hover {
 .content {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
 }
+
 .left-cont, .right-cont {
-  border: 1px solid var(--front-color);
+  background-color: var(--bg-color);
   border-radius: 2rem;
-  border-left-width: 3px;
-  border-right-width: 0;
-  /*background-color: var(--bg-color);*/
   min-width: 29rem;
   padding: 1rem 0.5;
   margin: 1rem;
   flex-grow: 1;
   flex-basis: 0;
 }
-.right-cont {
-  border-left-width: 0px;
-  border-right-width: 3px
-}
+
 .content p {
   margin: 1rem;
   font-size: 1.1rem;
@@ -198,7 +176,7 @@ footer a:hover {
   justify-content: center;
 }
 .left-port, .right-port {
-  display: flex; /*Tarviiko??*/
+  display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 1rem;
@@ -207,37 +185,47 @@ footer a:hover {
 }
 
 .portfolio {
-  /*DEV*/border: 1px dashed red;*/
-  /*background-color: var(--bg-color);*/
-  color: var(--font-color);
+  border-radius: 2rem;
+  background-color: var(--bg-color);
+  color: var(--front-color);
+  /*border-collapse: collapse;*/
   border-spacing: 0;
   padding: 0 1rem;
   padding-bottom: 1rem;
+  /*border: 1px dotted red;*/
 }
-
+/*.portfolio th {
+  font-size: 1.5em;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}*/
 .portfolio td.time, .portfolio td.place {
-  min-width: 170px;
+  min-width: 250px;
+  text-align: left;
   width: 25rem;
   height: auto;
   padding: 1rem 0.5rem;
+  /*TODO: uloimpien left ja right paddin 0
+    sisempi pädding 1rem*/
 }
+
 .portfolio td.place {
-  border: 1px solid var(--front-color);
-  border-radius: 3em;
-}
-.portfolio td.time {
-  text-align: left;
-  border: none;
-  min-width: 150px;
-}
-.portfolio td.place:not(.right) {
-  border-left-width: 0;
-  border-right-width: 3px;
+  border: 1px solid var(--hi-color);
+  border-width: 1px 1px 1px 0;
+  border-top-right-radius: 3em;
+  border-bottom-right-radius: 3em;
+  border-top-left-radius: 3em;
+  border-bottom-left-radius: 3em;
+  min-width: 170px;
 }
 .portfolio td.right {
-  border-right-width: 0;
-  border-left-width: 3px;
   text-align: right;
+  border-width: 1px 0 1px 1px;
+}
+.portfolio td.time {
+  border: none;
+  min-width: 150px;
 }
 
 
@@ -245,9 +233,6 @@ footer a:hover {
 /* || Mobile-optimization */
 /*TODO: 390px min portofoliolle*/
 @media only screen and (max-width: 630px) {
-  body {
-    background-size:inherit;
-  }
   header h1 {
     font-size: 2.5rem;
   }
@@ -278,7 +263,7 @@ footer a:hover {
     min-width: 300px;
   }
   .portfolio {
-    padding: 0 0.5rem;
+  padding: 0 0.5rem;
   }
   .portfolio td.place {
     border-radius: 1rem;
