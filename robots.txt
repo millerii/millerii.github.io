@@ -1,0 +1,6 @@
+# ollit.dev/robots.txt
+# Tell Google not to crawl any URLs listed in this file
+# because they won't be useful in Google Search results.
+User-agent: googlebot
+Disallow: /www_kehitys/
+
