@@ -7,15 +7,15 @@
 
 }
 :root { /* Global variables */
-  --bg-color: #2b3338;
-  --front-color: #5c6c78;
-  --font-color: gainsboro;
-  --hi-color: yellow;
+  --bg-color: #151716;
+  --dark-color: #2b3338;
+  --light-color: #5c6c78;
+  --font-color: #dcdcdc;
   --active-color: #5c6c786b;
-  --code-color: whitesmoke;
+  --code-color: #f5f5f5;
   --view-width: 100%;
   /* Custom scrollbar for firefox */
-  scrollbar-color: var(--front-color) var(--bg-color);
+  scrollbar-color: var(--light-color) var(--dark-color);
   scrollbar-width: thin;
 }
 
@@ -25,14 +25,15 @@
   width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-color);
+  background: var(--dark-color);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--front-color);
+  background: var(--light-color);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--font-color);
 }
+
 /* || Base styles */
 /******************/
 body {
@@ -45,23 +46,25 @@ body {
   "DejaVu Sans", Verdana, sans-serif;
   font-size: 100%;
   background-image: url("../images/wood.jpg");
-  /*background-blend-mode: multiply;*/
   background-attachment: fixed;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 h1, h2, h3, h4, h5 {
   color: var(--font-color);
   padding: 0.5rem;
 }
-h2 { /* Site -heading */
+h2 { /* Page "code"-heading */
   font-family: 'Courier New', Courier, monospace;
   font-weight: normal;
   font-size: 1.2rem;
   padding: 0.5rem;
   color: var(--code-color);
+  text-align: center;
 }
 h3 { /* Main section -heading */
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 1rem;
 }
 h4 { /* Portfolio 'place' -heading*/
@@ -69,7 +72,7 @@ h4 { /* Portfolio 'place' -heading*/
   font-weight: bold;
 }
 
-h5 { /* Content -heading */
+.content h3 { /* Content -heading */
   font-size: 1.2rem;
   font-weight: bold;
   margin-left: 1rem;
@@ -81,14 +84,14 @@ p {
   margin-bottom: 0;
 }
 i {
-  color: var(--front-color);
+  color: var(--light-color);
 }
 
 /* || Kuvien määritykset */
 /***************************/
 .image {
   /** 'Thumbnail' -kuvien kehykset **/
-  border: 0.125rem solid var(--front-color);
+  border: 0.125rem solid var(--light-color);
   border-radius: 13px;
   padding: 0.125rem;
   margin: 0.375rem;
@@ -105,7 +108,7 @@ i {
 /*********************************/
 /* || Header, Footer, Navigation */
 nav {
-  /*background-color: var(--bg-color);*/
+  /*background-color: var(--dark-color);*/
   display: flex;
   justify-content: space-between;
   margin: 0.5rem 2rem;
@@ -139,12 +142,12 @@ nav a:any-link {
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
 }
 nav a:hover {
-  background-color: var(--front-color);
+  background-color: var(--light-color);
   border-radius: 0.8rem;
 }
 .active {
   /*background-color: var(--active-color);*/
-  border: 1px solid var(--front-color);
+  border: 1px solid var(--light-color);
   border-top-width: 0;
   border-bottom-width: 3px;
   border-radius: 1rem;
@@ -154,16 +157,16 @@ header h1 {
   letter-spacing: 0.5rem;
   font-size: 4rem;
   text-align: center;
-  border-bottom: 2px solid var(--bg-color);
+  border-bottom: 2px solid var(--dark-color);
 }
 header h2 {
   text-align: center;
   /*TODO: tekstin levyinen kehys -> h2:n viiva pois */
-  /*border: 1px solid var(--front-color);
+  /*border: 1px solid var(--light-color);
   border-radius: 1rem;
   border-width: 1px 0 3px 0;*/
   /* display: inline-block;
-  background-color: var(--front-color);
+  background-color: var(--light-color);
   width: 600px;
   margin-left: auto;
   border-radius: 1rem;*/
@@ -180,7 +183,7 @@ footer a:any-link {
   padding: 0 1rem 0 1rem
 }
 footer a:hover {
-  color: var(--front-color);
+  color: var(--light-color);
 }
 
 /***************/
@@ -194,11 +197,11 @@ footer a:hover {
   align-items: flex-start;
 }
 .left-cont, .right-cont {
-  border: 1px solid var(--front-color);
+  border: 1px solid var(--light-color);
   border-radius: 2rem;
   border-left-width: 3px;
   border-right-width: 0;
-  /*background-color: var(--bg-color);*/
+  /*background-color: var(--dark-color);*/
   min-width: 29rem;
   padding: 1rem 0.5;
   margin: 1rem;
@@ -233,7 +236,7 @@ footer a:hover {
 
 .portfolio {
   /*DEV*//*border: 1px dashed red;*/
-  /*background-color: var(--bg-color);*/
+  /*background-color: var(--dark-color);*/
   color: var(--font-color);
   border-spacing: 0;
   padding: 0 1rem;
@@ -247,7 +250,7 @@ footer a:hover {
   padding: 1rem 0.5rem;
 }
 .portfolio td.place {
-  border: 1px solid var(--front-color);
+  border: 1px solid var(--light-color);
   border-radius: 3em;
 }
 .portfolio td.time {
@@ -268,9 +271,6 @@ footer a:hover {
 /* || Mobile-optimization */
 /*TODO: 390px min portofoliolle*/
 @media only screen and (max-width: 630px) {
-  body {
-    background-size:inherit;
-  }
   header h1 {
     font-size: 2.5rem;
   }
@@ -307,4 +307,10 @@ footer a:hover {
     border-radius: 1rem;
     padding: 0;
   }
+}
+
+@media only screen and (max-width: 630px) and (orientation: portrait) {
+  body {
+    background-image: url("../images/wood_potrait.jpg");
+   }
 }
