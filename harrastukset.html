@@ -2,26 +2,25 @@
 <html lang="fi">
 
 <head>
-  <title>Olli Lehtonen - Etusivu</title>
+  <title>Olli Lehtonen - Harrastukset ja projektit</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--TODO: Hakukone metadatat!!-->
-  <!--TODO: FavIco-->
-  <!--TODO: Custom Scrollbar-->
+  <link rel="icon" sizes="16x16 32x32" href="images/favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="lightbox/lightbox.css" >
   <script src="https://kit.fontawesome.com/003310c07e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+<main>
 <!-- Nav & Header -->
 <header>
   <nav>
     <img class="nav-logo" src="images/logo_ollit.png" alt="OlliT logo">
     <ul class="flex-nav">
-		  <li><a href="index.html">[ \home\olli ]</a></li>
-		  <li class="active"><a href="harrastukset.html">[ ~\projektit ]</a></li>
-		  <li><a href="portfolio.html">[ ~\portfolio ]</a></li>
+      <li><a href="index.html">\home\olli</a></li>
+      <li class="active"><a href="harrastukset.html">~\harrastukset</a></li>
+      <li><a href="portfolio.html">~\työ_ja_koulu</a></li>
 	  </ul>
 	</nav>
 
@@ -64,11 +63,12 @@
       <h5>Ohjelmointi</h5>
       <p>
         <i class="fas fa-code fa-3x fa-pull-left"></i>
-        Ohjelmointiharrastuksen olen aloittanut Visual Basic:llä yläaste-aikana ja
-        jatkanut C-kieleen Atmel AVR/Arduino-laitteiden kanssa.
-        Viimevuosina olen ohjelmoinut Codesys-ympäristössä (lasten)sähköauton ohjauksen,
-        tyco-sähköautoradan ajanottojärjestelmän sekä nappipelin.<br>
-        Sekä käyttänyt python-kieltä jo mainitussa raspberryn tapauksessa.<br>
+        Ohjelmointiharrastuksen olen aloittanut Visual Basic:llä yläaste-aikoina 800-sivuista opusta lukemalla
+        ja jatkanut ammattikoulussa C-kieleen Atmelin AVR/Arduino -laitteiden kanssa.
+        Viimevuosina olen ohjelmoinut Codesys-ympäristössä (lasten)polkuauton sähköistyksen,
+        tyco-sähköautoradan ajanottojärjestelmän sekä nappipelin. Oli mielenkiintoista
+        tutustua silloisen työnantajan tuotteisiin myös toisesta näkökulmasta "loppukäyttäjänä".<br>
+        Lisäksi olen käyttänyt python-kieltä jo mainitussa raspberryn tapauksessa ja avoimen JAMK:n ohjelmointikurssilla.<br>
 
         <a class="imagelink" href="images/codesys_tyco.jpg" data-lightbox="code"
           data-title="Tyco-sähköautoradan ajanottojärjestelmä, kierrosten lasku, ajanotto ja autojen pwm-ohjattu kaasu.">
@@ -134,8 +134,10 @@
 <!-- Footer -->
 <footer>
   <a href="mailto:olli.lehtonen@gmail.com_POISTA">email: <i class="fas fa-at"></i></a>
-  | <a href="https://www.linkedin.com/in/olli-p-lehtonen" target="_blank">linkedin: <i class="fab fa-linkedin"></i></a>
-  | <a href="https://github.com/millerii" target="_blank">github: <i class="fab fa-github"></i></a>
+  | <a href="https://www.linkedin.com/in/olli-p-lehtonen" rel="noopener noreferrer" target="_blank">
+    linkedin: <i class="fab fa-linkedin"></i></a>
+  | <a href="https://github.com/millerii" rel="noopener noreferrer" target="_blank">
+    github: <i class="fab fa-github"></i></a>
 </footer>
 
 <!-- Galleria script, must be last -->
@@ -148,5 +150,6 @@
   })
 </script>
 
+</main>
 </body>
 </html>

@@ -4,6 +4,7 @@
   margin: 0px; /* Nollaa ihan jokaiselta elementiltä, body,h1,p,ul... */
   padding: 0; /* Poistaa myös mm. listoista*/
   box-sizing: border-box;
+
 }
 :root { /* Global variables */
   --bg-color: #2b3338;
@@ -13,8 +14,25 @@
   --active-color: #5c6c786b;
   --code-color: whitesmoke;
   --view-width: 100%;
+  /* Custom scrollbar for firefox */
+  scrollbar-color: var(--front-color) var(--bg-color);
+  scrollbar-width: thin;
 }
 
+/* Custom scrollbar chrome-based */
+/*********************************/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--front-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--font-color);
+}
 /* || Base styles */
 /******************/
 body {
@@ -126,7 +144,6 @@ nav a:hover {
 }
 .active {
   /*background-color: var(--active-color);*/
-  box-sizing: content-box;
   border: 1px solid var(--front-color);
   border-top-width: 0;
   border-bottom-width: 3px;
@@ -141,13 +158,14 @@ header h1 {
 }
 header h2 {
   text-align: center;
-  /*TODO: paddingiä niin että pisarat näkyy kokonaan
-    ja navin rivinvaihdon jälkeen pienempi pädding*/
-  /*TODO: tekstin levyinen boksi*/
+  /*TODO: tekstin levyinen kehys -> h2:n viiva pois */
+  /*border: 1px solid var(--front-color);
+  border-radius: 1rem;
+  border-width: 1px 0 3px 0;*/
   /* display: inline-block;
   background-color: var(--front-color);
   width: 600px;
-  margin-left: aut;
+  margin-left: auto;
   border-radius: 1rem;*/
 }
 
@@ -223,7 +241,7 @@ footer a:hover {
 }
 
 .portfolio td.time, .portfolio td.place {
-  min-width: 170px;
+  min-width: 10rem;
   width: 25rem;
   height: auto;
   padding: 1rem 0.5rem;
@@ -235,7 +253,6 @@ footer a:hover {
 .portfolio td.time {
   text-align: left;
   border: none;
-  min-width: 150px;
 }
 .portfolio td.place:nth-child(odd) {
   border-right-width: 0;
@@ -246,7 +263,6 @@ footer a:hover {
   border-left-width: 0;
   border-right-width: 3px;
 }
-
 
 /**************************/
 /* || Mobile-optimization */

@@ -2,25 +2,24 @@
 <html lang="fi">
 
 <head>
-  <title>Olli Lehtonen - Etusivu</title>
+  <title>Olli Lehtonen - Työ ja koulu</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--TODO: Hakukone metadatat!!-->
-  <!--TODO: FavIco-->
-  <!--TODO: Custom Scrollbar-->
+  <link rel="icon" sizes="16x16 32x32" href="images/favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles/styles.css">
   <script src="https://kit.fontawesome.com/003310c07e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <!-- Nav & Header -->
+<main>
+<!-- Nav & Header -->
 <header>
   <nav>
     <img class="nav-logo" src="images/logo_ollit.png" alt="OlliT logo">
     <ul class="flex-nav">
-		<li><a href="index.html">[ \home\olli ]</a></li>
-		<li><a href="harrastukset.html">[ ~\projektit ]</a></li>
-		<li class="active"><a href="portfolio.html">[ ~\portfolio ]</a></li>
+      <li><a href="index.html">\home\olli</a></li>
+      <li><a href="harrastukset.html">~\harrastukset</a></li>
+      <li class="active"><a href="portfolio.html">~\työ_ja_koulu</a></li>
 	  </ul>
 	</nav>
 
@@ -30,10 +29,10 @@
 <!-- Content -->
 <section>
   <header class="koodi">
-    <h2>&gt;$ pandoc -s portfolio.txt -o portfolio.html</h2>
+    <h2>&gt;$ pandoc työ_ja_koulutus.txt -s -o portfolio.html </h2>
   </header>
   <section class="flex-portfolio">
-    <!-- START työhistoria -->
+    <!-- Työhistoria -->
     <article class="left-port">
       <table class="portfolio">
         <tr>
@@ -61,7 +60,7 @@
       </table>
     </article>
 
-    <!-- START koulutus -->
+    <!-- Koulutus -->
     <article class="right-port">
       <table class="portfolio">
         <tr>
@@ -103,9 +102,12 @@
 <!-- Footer -->
 <footer>
   <a href="mailto:olli.lehtonen@gmail.com_POISTA">email: <i class="fas fa-at"></i></a>
-  | <a href="https://www.linkedin.com/in/olli-p-lehtonen" target="_blank">linkedin: <i class="fab fa-linkedin"></i></a>
-  | <a href="https://github.com/millerii" target="_blank">github: <i class="fab fa-github"></i></a>
+  | <a href="https://www.linkedin.com/in/olli-p-lehtonen" rel="noopener noreferrer" target="_blank">
+    linkedin: <i class="fab fa-linkedin"></i></a>
+  | <a href="https://github.com/millerii" rel="noopener noreferrer" target="_blank">
+    github: <i class="fab fa-github"></i></a>
 </footer>
 
+</main>
 </body>
 </html>
