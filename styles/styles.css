@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Julius+Sans+One&display=swap');
 
-* { /* Asetukset jotka koskevat aivan kaikkea sivulla olevaa */
-  margin: 0px; /* Nollaa ihan jokaiselta elementiltä, body,h1,p,ul... */
-  padding: 0; /* Poistaa myös mm. listoista*/
+* { /* Settings that apply to everything on the page */
+  margin: 0; /* Zero for every element, body,h1,p,ul... */
+  padding: 0;
   box-sizing: border-box;
-
 }
+
 :root { /* Global variables */
   --bg-color: #151716;
   --dark-color: #2b3338;
@@ -13,10 +13,9 @@
   --font-color: #dcdcdc;
   --active-color: #5c6c786b;
   --code-color: #f5f5f5;
-  --view-width: 100%;
   /* Custom scrollbar for firefox */
   scrollbar-color: var(--light-color) var(--dark-color);
-  scrollbar-width: thin;
+  /*scrollbar-width: thin;*/ /* Toimii, mutta validaattori ei hyväksy vaikka w3schools sivuillakin on mainittu */
 }
 
 /* Custom scrollbar chrome-based */
@@ -37,11 +36,11 @@
 /* || Base styles */
 /******************/
 body {
-  /*TODO: sivun max-width*/
   max-width: 1500px;
   margin: auto;
   background-color: var(--bg-color);
   color: var(--font-color);
+  /*TODO: Fonttien tarkistus*/
   font-family: "Chakra Petch", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
   "DejaVu Sans", Verdana, sans-serif;
   font-size: 100%;
@@ -63,18 +62,16 @@ h2 { /* Page "code"-heading */
   color: var(--code-color);
   text-align: center;
 }
-h3 { /* Main section -heading */
+h3 { /* Main section -heading (portfolio) */
   font-size: 1.8rem;
   margin: 1rem;
 }
-h4 { /* Portfolio 'place' -heading*/
+h4 { /* Portfolio 'place' and 'time' -heading*/
   font-size: 1.2rem;
   font-weight: bold;
 }
-
 .content h3 { /* Content -heading */
   font-size: 1.2rem;
-  font-weight: bold;
   margin-left: 1rem;
 }
 
@@ -87,28 +84,27 @@ i {
   color: var(--light-color);
 }
 
-/* || Kuvien määritykset */
+/* || Image styles */
 /***************************/
-.image {
-  /** 'Thumbnail' -kuvien kehykset **/
+.imagelink > img {
+  /** 'Thumbnail' image frame **/
   border: 0.125rem solid var(--light-color);
-  border-radius: 13px;
+  border-radius: 0.8125rem;
   padding: 0.125rem;
   margin: 0.375rem;
   width: auto;
   height: 9rem;
 }
-.image:hover {
-  /** Kuvien 'hover' -keykset **/
-    margin: 6px;
-    box-shadow: 0 0 0.625rem 0.3125rem var(--font-color);
-    border: none;
-  }
+img.gallery:hover {
+  /** Imagelink 'hover' -frame **/
+  margin: 0.375rem;
+  box-shadow: 0 0 0.625rem 0.3125rem var(--font-color);
+  border: none;
+}
 
 /*********************************/
 /* || Header, Footer, Navigation */
 nav {
-  /*background-color: var(--dark-color);*/
   display: flex;
   justify-content: space-between;
   margin: 0.5rem 2rem;
@@ -116,10 +112,10 @@ nav {
   border-radius: 0.5rem;
 }
 .nav-logo {
-  /*display: inline-block;*/ /*Tomii ilmankin*/
   padding-left: 1rem;
   margin: auto 0;
-  height: 2.7rem; /* Korkeus riippuvainen 'nav fon-size' ja 'a:any-link padding' */
+  height: 2.2em;
+  width: auto;
 }
 .flex-nav {
   list-style: none;
@@ -146,7 +142,6 @@ nav a:hover {
   border-radius: 0.8rem;
 }
 .active {
-  /*background-color: var(--active-color);*/
   border: 1px solid var(--light-color);
   border-top-width: 0;
   border-bottom-width: 3px;
@@ -161,15 +156,6 @@ header h1 {
 }
 header h2 {
   text-align: center;
-  /*TODO: tekstin levyinen kehys -> h2:n viiva pois */
-  /*border: 1px solid var(--light-color);
-  border-radius: 1rem;
-  border-width: 1px 0 3px 0;*/
-  /* display: inline-block;
-  background-color: var(--light-color);
-  width: 600px;
-  margin-left: auto;
-  border-radius: 1rem;*/
 }
 
 footer {
@@ -187,10 +173,7 @@ footer a:hover {
 }
 
 /***************/
-/* || Content */
-
-/* Index */
-
+/* || Main content */
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -201,9 +184,8 @@ footer a:hover {
   border-radius: 2rem;
   border-left-width: 3px;
   border-right-width: 0;
-  /*background-color: var(--dark-color);*/
   min-width: 29rem;
-  padding: 1rem 0.5;
+  padding: 1rem 0.5rem;
   margin: 1rem;
   flex-grow: 1;
   flex-basis: 0;
@@ -212,10 +194,21 @@ footer a:hover {
   border-left-width: 0px;
   border-right-width: 3px
 }
+
 .content p {
   margin: 1rem;
   font-size: 1.1rem;
   max-width: 80ch;
+}
+
+.content a:any-link:not(.imagelink) {
+  text-decoration: none;
+  color: var(--light-color);
+}
+.content a:hover:not(.imagelink) {
+  background-color: var(--active-color);
+  color: var(--font-color);
+  border-radius: 0.4em;
 }
 
 /* Portfolio */
@@ -226,7 +219,6 @@ footer a:hover {
   justify-content: center;
 }
 .left-port, .right-port {
-  display: flex; /*Tarviiko??*/
   justify-content: center;
   align-items: flex-start;
   padding: 1rem;
@@ -235,8 +227,6 @@ footer a:hover {
 }
 
 .portfolio {
-  /*DEV*//*border: 1px dashed red;*/
-  /*background-color: var(--dark-color);*/
   color: var(--font-color);
   border-spacing: 0;
   padding: 0 1rem;
@@ -269,7 +259,6 @@ footer a:hover {
 
 /**************************/
 /* || Mobile-optimization */
-/*TODO: 390px min portofoliolle*/
 @media only screen and (max-width: 630px) {
   header h1 {
     font-size: 2.5rem;
@@ -289,10 +278,6 @@ footer a:hover {
   .nav-logo {
     padding: 0;
     margin: auto;
-    width: calc(var(--view-width) - 400px);
-    min-width: 10rem;
-    max-width: 16rem;
-    height: auto;
   }
   footer a:any-link {
     padding: 0 0.5rem 0 0.5rem
