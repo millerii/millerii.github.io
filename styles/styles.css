@@ -97,8 +97,10 @@ img.gallery:hover {
 }
 
 img.potrait {
-  float: right;
-  width: 15.625rem;
+  float:right;
+  max-width: 15rem;
+  min-width: 10rem;
+  width: 17vw;
   height: auto;
 }
 
@@ -141,7 +143,7 @@ nav a:hover {
   background-color: var(--light-color);
   border-radius: 0.8rem;
 }
-.active {
+.active { /* Active page mark */
   border: 1px solid var(--light-color);
   border-top-width: 0;
   border-bottom-width: 3px;
@@ -298,10 +300,18 @@ footer a:hover {
     border-radius: 1rem;
     padding: 0;
   }
+
 }
 
 @media only screen and (max-width: 630px) and (orientation: portrait) {
   body {
     background-image: url("../images/wood_potrait.jpg");
    }
+}
+
+@media only screen and (max-width: 430px){
+  img.potrait {
+    float:none;
+    margin-left: 3rem;
+  }
 }
