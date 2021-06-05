@@ -1,2 +1,4 @@
 # millerii.github.io
-Personal web-page
+Personal portfolio/web-page
+
+Credits from lightbox-gallery goes to Lokesh Dhakar.
