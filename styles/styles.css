@@ -84,6 +84,7 @@ th { /* Portfolio -heading */
 }
 p {
   color: var(--font-color);
+  margin: 0.5rem;
 }
 i {
   color: var(--light-color);
