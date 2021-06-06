@@ -40,9 +40,7 @@ body {
   margin: auto;
   background-color: var(--bg-color);
   color: var(--font-color);
-  /*TODO: Fonttien tarkistus*/
-  font-family: "Chakra Petch", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
-  "DejaVu Sans", Verdana, sans-serif;
+  font-family: "Chakra Petch", "DejaVu Sans", sans-serif;
   font-size: 100%;
   background-image: url("../images/wood.jpg");
   background-attachment: fixed;
@@ -53,6 +51,20 @@ body {
 h1, h2, h3, h4, h5 {
   color: var(--font-color);
   padding: 0.5rem;
+}
+h1 { /* 'olli' -heading */
+  font-family: 'Julius Sans One', 'Trebuchet MS', Helvetica;
+  letter-spacing: 0.5rem;
+  font-size: 4rem;
+  text-align: center;
+  border-bottom: 2px solid var(--dark-color);
+}
+h2 { /* Page 'code' -heading */
+  color: var(--code-color);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: center;
 }
 h3 { /* Content -heading */
   font-size: 1.2rem;
@@ -72,7 +84,6 @@ th { /* Portfolio -heading */
 }
 p {
   color: var(--font-color);
-  /*margin: 0.5rem; /* TODO: miksi */
 }
 i {
   color: var(--light-color);
@@ -143,25 +154,11 @@ nav a:hover {
   background-color: var(--light-color);
   border-radius: 0.8rem;
 }
-.active { /* Active page mark */
+.active { /* Active page -mark */
   border: 1px solid var(--light-color);
   border-top-width: 0;
   border-bottom-width: 3px;
   border-radius: 1rem;
-}
-header h1 {
-  font-family: 'Julius Sans One', sans-serif;
-  letter-spacing: 0.5rem;
-  font-size: 4rem;
-  text-align: center;
-  border-bottom: 2px solid var(--dark-color);
-}
-header h2 { /* Page 'code' -heading */
-  color: var(--code-color);
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: normal;
-  text-align: center;
-  font-size: 1.2rem;
 }
 
 footer {
