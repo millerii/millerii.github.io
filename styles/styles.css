@@ -239,7 +239,7 @@ footer a:hover {
 
 .portfolio td.time, .portfolio td.place {
   min-width: 10rem;
-  width: 25rem;
+  width: 45rem;
   height: auto;
   padding: 1rem 0.5rem;
 }
